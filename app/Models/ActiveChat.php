@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Test extends Model
+class ActiveChat extends Model
 {
-    use HasFactory, HasUuids;
-
+    use HasFactory;
     protected $fillable = [
-        'number',
-        'string',
-        'text'
+        'from_id',
+        'to_id',
+        'status',
+        'created_at',
+        'updated_at'
     ];
 }

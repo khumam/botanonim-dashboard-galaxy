@@ -7,7 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     @livewireStyles
+    @if(env('APP_ENV') == 'local')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+    <link href="{{ url('build/assets/app-4c8d2d4c.css') }}" rel="stylesheet" />
+    <script src="{{ url('build/assets/app-6e0eadfb.js') }}"></script>
+    @endif
 </head>
 
 <body class="font-sans antialiased overflow-y-scroll">
@@ -16,7 +21,7 @@
         <header>
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ __('Welcome to Galaxy Dashboard') }}
+                    {{ __('Welcome to Management Dashboard') }}
                 </h2>
                 <p class="font-sm font-light text-gray-500 mt-1">All of your Models will be listed here</p>
             </div>

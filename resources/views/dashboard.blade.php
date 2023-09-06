@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
-        <p class="text-gray-500 mt-1">{{ __('Explore your amazing app start from your desktop') }}</p>
+        <p class="text-gray-500 mt-1">{{ __('Selamat datang di halaman dashboard Bot Anonim') }}</p>
     </x-slot>
 
     <div class="px-4 md:px-0">

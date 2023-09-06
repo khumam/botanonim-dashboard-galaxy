@@ -32,7 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::prefix('galaxy')->group(function () {
+    Route::prefix('management')->group(function () {
         Route::get('/', [GalaxyController::class, 'main'])->name('galaxy.main');
         Route::get('{galaxyModel}', [GalaxyController::class, 'index'])->name('galaxy.index');
         Route::get('{galaxyModel}/create', [GalaxyController::class, 'create'])->name('galaxy.create');

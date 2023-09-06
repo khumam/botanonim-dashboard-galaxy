@@ -7,7 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     @livewireStyles
+    @if(env('APP_ENV') == 'local')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+    <link href="{{ url('build/assets/app-4c8d2d4c.css') }}" rel="stylesheet" />
+    <script src="{{ url('build/assets/app-6e0eadfb.js') }}"></script>
+    @endif
 </head>
 
 <body class="font-sans antialiased">
